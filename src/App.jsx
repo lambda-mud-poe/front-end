@@ -1,10 +1,16 @@
 import React from 'react';
-import GameArea from './Components/views/GameArea';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+
+import Login from './components/auth/Login';
+import GameArea from './components/views/GameArea';
 
 function App() {
   return (
     <div className="App">
-      <GameArea/>
+      <Router>
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/" component={GameArea} />
+      </Router>
     </div>
   );
 }
