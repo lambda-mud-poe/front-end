@@ -1,5 +1,5 @@
 import React from 'react';
-import DashBoard from '../~reuseables/Components/DashBooard';
+import DashBoard from '../~reuseables/molecules/DashBooard';
 
 
 const GameArea =()=>{
