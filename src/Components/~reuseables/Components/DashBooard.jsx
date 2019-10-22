@@ -9,7 +9,7 @@ import {
   ChatBox,
   StyledForm,
   LogScreen
-} from "../atoms/DashBoardStyles";
+} from "../styles/DashBoardStyles";
 import TextArea from "../atoms/TextArea";
 
 const DashBoard = () => {
