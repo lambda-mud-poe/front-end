@@ -32,7 +32,7 @@ export default function Register() {
   if (Object.keys(registrationError).length > 0) {
     console.log(registrationError);
     if (registrationError.non_field_errors) {
-        alert(registrationError.registrationError)
+        alert(registrationError.non_field_errors)
     }
 
     if (registrationError.username) {
