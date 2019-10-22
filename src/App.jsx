@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
+import PrivateRoute from './components/~reuseables/molecules/PrivateRoute';
 import GameArea from './components/views/GameArea';
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
       <Router>
         <Route exact path="/login" component={Login} />
         <Route exact path="/register" component={Register} />
-        <Route exact path="/" component={GameArea} />
+        <PrivateRoute exact path="/" component={GameArea} />
       </Router>
     </div>
   );
