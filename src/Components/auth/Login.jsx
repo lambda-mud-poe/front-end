@@ -16,7 +16,10 @@ export default function Login() {
         username,
         password
       })
-      .then(res => setLoginSuccess(res.data))
+      .then(res => {
+        localStorage.setItem('key', res.data.key);
+        setLoginSuccess(res.data);
+      })
       .catch(err => setLoginError(err.response.data.non_field_errors[0]));
   };
 
@@ -26,6 +29,7 @@ export default function Login() {
 
   if (loginError) {
     alert(loginError);
+    setLoginError(false);
   }
 
   return (
