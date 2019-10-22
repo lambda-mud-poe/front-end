@@ -10,7 +10,9 @@ export {
   lightGrey,
   white,
   dark,
-  purple //   rgb_red
+  purple,
+  slatePurple,
+  forestGreen
 } from "./colors";
 
 //====== FONT FAMILY ======//
