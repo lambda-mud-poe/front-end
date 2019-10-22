@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Screen } from '../styles/DashBoardStyles';
+import { ScreenStyle } from '../styles/DashBoardStyles';
 
 
 const GameScreen =({map})=>{
     return (
-        <Screen>
+        <ScreenStyle>
         {map}
-        </Screen>
+        </ScreenStyle>
     )
 }
 

@@ -2,15 +2,12 @@ import React from "react";
 import {
   MainContainer,
   Container,
-  ControllArea,
-  ActionsArea,
-  Navigation,
-  ChatBox,
-  StyledForm,
-  LogScreen
+  ControllArea
 } from "../styles/DashBoardStyles";
-import TextArea from "../atoms/TextArea";
 import GameScreen from "../atoms/GameScreen";
+import ActionArea from "./ActionsArea";
+import LogScreen from "../atoms/LogScreen";
+import ChatBox from "./ChatBox";
 
 const DashBoard = () => {
   return (
@@ -18,15 +15,10 @@ const DashBoard = () => {
       <Container>
         <ControllArea>
           <GameScreen/>
-          <ActionsArea>
-            <ChatBox>Chat output</ChatBox>
-            <Navigation>Directions</Navigation>
-          </ActionsArea>
-          <StyledForm>
-            <TextArea name="message" />
-          </StyledForm>
+          <ActionArea/>
+          <ChatBox/>
         </ControllArea>
-        <LogScreen>Log Screen</LogScreen>
+        <LogScreen/>
       </Container>
     </MainContainer>
   );
