@@ -1,10 +1,10 @@
 import React from 'react';
-import './App.css';
+import GameArea from './Components/views/GameArea';
 
 function App() {
   return (
     <div className="App">
-      Gaaammee
+      <GameArea/>
     </div>
   );
 }
