@@ -7,7 +7,7 @@ export default function Register() {
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [retistrationSuccess, setRegistrationSuccess] = useState(false);
-  const [registrationError, setRegistrationError] = useState(false);
+  const [registrationError, setRegistrationError] = useState({});
 
   const onSubmit = e => {
     e.preventDefault();
@@ -22,10 +22,7 @@ export default function Register() {
         localStorage.setItem('key', res.data.key);
         setRegistrationSuccess(true);
       })
-      .catch(
-        err => console.log(err.response.data)
-        // setRegistrationError(err.response.data.non_field_errors[0])
-      );
+      .catch(err => setRegistrationError(err.response.data));
   };
 
   if (retistrationSuccess) {
@@ -33,7 +30,8 @@ export default function Register() {
   }
 
   if (registrationError) {
-    alert(registrationError);
+    console.log(registrationError);
+    // alert(registrationError);
   }
 
   return (
