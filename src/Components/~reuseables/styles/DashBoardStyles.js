@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { white, red, slatePurple, forestGreen } from "../variables";
+import { white, slatePurple, forestGreen } from "../variables";
 
 export const MainContainer = styled.div`
   background: ${slatePurple};
