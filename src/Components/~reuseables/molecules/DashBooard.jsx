@@ -3,7 +3,6 @@ import {
   MainContainer,
   Container,
   ControllArea,
-  Screen,
   ActionsArea,
   Navigation,
   ChatBox,
@@ -11,13 +10,14 @@ import {
   LogScreen
 } from "../styles/DashBoardStyles";
 import TextArea from "../atoms/TextArea";
+import GameScreen from "../atoms/GameScreen";
 
 const DashBoard = () => {
   return (
     <MainContainer>
       <Container>
         <ControllArea>
-          <Screen>Screen Area</Screen>
+          <GameScreen/>
           <ActionsArea>
             <ChatBox>Chat output</ChatBox>
             <Navigation>Directions</Navigation>
