@@ -2,31 +2,23 @@ import React from "react";
 import {
   MainContainer,
   Container,
-  ControllArea,
-  Screen,
-  ActionsArea,
-  Navigation,
-  ChatBox,
-  StyledForm,
-  LogScreen
+  ControllArea
 } from "../styles/DashBoardStyles";
-import TextArea from "../atoms/TextArea";
+import GameScreen from "../atoms/GameScreen";
+import ActionArea from "./ActionsArea";
+import LogScreen from "../atoms/LogScreen";
+import ChatBox from "./ChatBox";
 
 const DashBoard = () => {
   return (
     <MainContainer>
       <Container>
         <ControllArea>
-          <Screen>Screen Area</Screen>
-          <ActionsArea>
-            <ChatBox>Chat output</ChatBox>
-            <Navigation>Directions</Navigation>
-          </ActionsArea>
-          <StyledForm>
-            <TextArea name="message" />
-          </StyledForm>
+          <GameScreen/>
+          <ActionArea/>
+          <ChatBox/>
         </ControllArea>
-        <LogScreen>Log Screen</LogScreen>
+        <LogScreen/>
       </Container>
     </MainContainer>
   );
