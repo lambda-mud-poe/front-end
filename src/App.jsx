@@ -1,5 +1,5 @@
 import React from 'react';
-import GameArea from './Components/views/GameArea';
+import GameArea from './components/views/GameArea';
 
 function App() {
   return (
