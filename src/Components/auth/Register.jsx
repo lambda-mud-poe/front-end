@@ -26,7 +26,7 @@ export default function Register() {
   };
 
   if (retistrationSuccess) {
-    return <Redirect to="/login" />;
+    return <Redirect to="/" />;
   }
 
   if (registrationError) {
