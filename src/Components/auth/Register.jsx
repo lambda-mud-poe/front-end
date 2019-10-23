@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
+import { Form, FormContainer} from './StyledLogin'
 
 export default function Register() {
   const [username, setUsername] = useState('');
@@ -48,8 +49,10 @@ export default function Register() {
   }
 
   return (
-    <div>
-      <form onSubmit={onSubmit}>
+    <FormContainer>
+      <h1>Mud Game</h1>
+      <Form onSubmit={onSubmit}>
+        <h4>Register</h4>
         <input
           placeholder="Enter Username"
           type="text"
@@ -70,8 +73,8 @@ export default function Register() {
           required
           onChange={e => setConfirmPassword(e.target.value)}
         />
-        <button>Submit</button>
-      </form>
-    </div>
+        <button>Register</button>
+      </Form>
+    </FormContainer>
   );
 }

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
-// import { FormContainer, Form } from './StyledLogin';
-import { Form, FormContainer} from './StyledLogin'
+import { Form, FormContainer } from './StyledLogin';
 
 export default function Login() {
   const [username, setUsername] = useState('');
