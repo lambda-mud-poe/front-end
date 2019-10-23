@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 import { Form, FormContainer } from './StyledLogin';
 
 export default function Login() {
@@ -54,6 +54,7 @@ export default function Login() {
           onChange={e => setPassword(e.target.value)}
         />
         <button>Login</button>
+        <p>Don't have an account? <Link to="/register"> Register here</Link></p>
       </Form>
     </FormContainer>
   );

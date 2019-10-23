@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
-import { Form, FormContainer} from './StyledLogin'
+import { Redirect, Link } from 'react-router-dom';
+import { Form, FormContainer } from './StyledLogin';
 
 export default function Register() {
   const [username, setUsername] = useState('');
@@ -34,17 +34,17 @@ export default function Register() {
   if (Object.keys(registrationError).length > 0) {
     console.log(registrationError);
     if (registrationError.non_field_errors) {
-        alert(registrationError.non_field_errors)
+      alert(registrationError.non_field_errors);
     }
 
     if (registrationError.username) {
-        alert(registrationError.username)
+      alert(registrationError.username);
     }
 
     if (registrationError.password) {
-        alert(registrationError.password)
+      alert(registrationError.password);
     }
-    setRegistrationError(false)
+    setRegistrationError(false);
     // alert(registrationError);
   }
 
@@ -74,6 +74,10 @@ export default function Register() {
           onChange={e => setConfirmPassword(e.target.value)}
         />
         <button>Register</button>
+
+        <p>
+          Already have an account? <Link to="/login"> Login here</Link>
+        </p>
       </Form>
     </FormContainer>
   );

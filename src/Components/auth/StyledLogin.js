@@ -51,6 +51,13 @@ const Form = styled.form`
     &:hover {
     }
   }
+
+  p {
+    color: ${white};
+    margin: 1rem 0;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1rem;
+  }
 `;
 
 export { FormContainer, Form };
