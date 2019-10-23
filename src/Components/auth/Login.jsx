@@ -10,7 +10,6 @@ export default function Login() {
 
   const onSubmit = e => {
     e.preventDefault();
-    // const baseUrl = `https://lambda-mud-test.herokuapp.com`;
     const baseUrl = `https://mount-doom-mud.herokuapp.com`;
     axios
       .post(`${baseUrl}/api/login/`, {
@@ -23,8 +22,7 @@ export default function Login() {
         console.log(res)
       })
       .catch(err => {
-        console.log(err.response.data)
-        // setLoginError(err.response.data.non_field_errors[0])
+        setLoginError(err.response.data.non_field_errors[0])
       });
   };
 

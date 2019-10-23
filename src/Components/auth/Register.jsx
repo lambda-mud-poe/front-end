@@ -11,7 +11,6 @@ export default function Register() {
 
   const onSubmit = e => {
     e.preventDefault();
-    // const baseUrl = `https://lambda-mud-test.herokuapp.com`;
     const baseUrl = `https://mount-doom-mud.herokuapp.com`;
 
     axios
