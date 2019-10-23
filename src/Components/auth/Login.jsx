@@ -12,7 +12,7 @@ export default function Login() {
     e.preventDefault();
 
     axios
-      .post(' https://mount-doom-mud.herokuapp.com/api/login/', {
+      .post('https://mount-doom-mud.herokuapp.com/api/login/', {
         username,
         password
       })
