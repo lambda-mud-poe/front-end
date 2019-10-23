@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
-import StyledLogin from './StyledLogin';
+// import { FormContainer, Form } from './StyledLogin';
+import { Form, FormContainer} from './StyledLogin'
 
 export default function Login() {
   const [username, setUsername] = useState('');
@@ -37,9 +38,10 @@ export default function Login() {
   }
 
   return (
-    <StyledLogin>
+    <FormContainer>
       <h1>Mud Game</h1>
-      <form onSubmit={onSubmit}>
+      <Form onSubmit={onSubmit}>
+        <h4>Login</h4>
         <input
           placeholder="Enter Username"
           type="text"
@@ -53,7 +55,7 @@ export default function Login() {
           onChange={e => setPassword(e.target.value)}
         />
         <button>Submit</button>
-      </form>
-    </StyledLogin>
+      </Form>
+    </FormContainer>
   );
 }
