@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Redirect } from 'react-router-dom';
+import StyledLogin from './StyledLogin';
 
 export default function Login() {
   const [username, setUsername] = useState('');
@@ -19,10 +20,10 @@ export default function Login() {
       .then(res => {
         localStorage.setItem('key', res.data.key);
         setLoginSuccess(res.data);
-        console.log(res)
+        console.log(res);
       })
       .catch(err => {
-        setLoginError(err.response.data.non_field_errors[0])
+        setLoginError(err.response.data.non_field_errors[0]);
       });
   };
 
@@ -36,7 +37,8 @@ export default function Login() {
   }
 
   return (
-    <div>
+    <StyledLogin>
+      <h1>Mud Game</h1>
       <form onSubmit={onSubmit}>
         <input
           placeholder="Enter Username"
@@ -52,6 +54,6 @@ export default function Login() {
         />
         <button>Submit</button>
       </form>
-    </div>
+    </StyledLogin>
   );
 }
