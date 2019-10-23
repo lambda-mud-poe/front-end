@@ -11,9 +11,10 @@ export default function Register() {
 
   const onSubmit = e => {
     e.preventDefault();
+    const baseUrl = `https://mount-doom-mud.herokuapp.com`;
 
     axios
-      .post(' https://mount-doom-mud.herokuapp.com/api/registration/', {
+      .post(`${baseUrl}/api/registration/`, {
         username,
         password1: password,
         password2: confirmPassword
