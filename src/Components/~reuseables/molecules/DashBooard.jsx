@@ -9,16 +9,16 @@ import ActionArea from "./ActionsArea";
 import LogScreen from "../atoms/LogScreen";
 import ChatBox from "./ChatBox";
 
-const DashBoard = () => {
+const DashBoard = ({ data }) => {
   return (
     <MainContainer>
       <Container>
         <ControllArea>
-          <GameScreen/>
-          <ActionArea/>
-          <ChatBox/>
+          <GameScreen />
+          <ActionArea />
+          <ChatBox />
         </ControllArea>
-        <LogScreen/>
+        <LogScreen logs={data}/>
       </Container>
     </MainContainer>
   );

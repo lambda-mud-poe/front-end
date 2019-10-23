@@ -10,17 +10,20 @@ export default function Login() {
 
   const onSubmit = e => {
     e.preventDefault();
-
+    const baseUrl = `https://mount-doom-mud.herokuapp.com`;
     axios
-      .post(' https://mount-doom-mud.herokuapp.com/api/login/', {
+      .post(`${baseUrl}/api/login/`, {
         username,
         password
       })
       .then(res => {
         localStorage.setItem('key', res.data.key);
         setLoginSuccess(res.data);
+        console.log(res)
       })
-      .catch(err => setLoginError(err.response.data.non_field_errors[0]));
+      .catch(err => {
+        setLoginError(err.response.data.non_field_errors[0])
+      });
   };
 
   if (loginSuccess) {
