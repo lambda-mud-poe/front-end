@@ -2,10 +2,10 @@ import React from 'react';
 import { ChatScreenStyle } from '../styles/DashBoardStyles';
 import ChatBox from '../molecules/ChatBox';
 
-const ChatScreen = ({ chats }) => {
+const ChatScreen = ({ chats, sendMessage }) => {
   return (
     <ChatScreenStyle>
-      <ChatBox />
+      <ChatBox sendMessage={sendMessage}/>
 
       <div className="chatbox">
         <h4>Chats</h4>

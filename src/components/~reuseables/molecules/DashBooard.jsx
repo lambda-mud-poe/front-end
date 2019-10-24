@@ -10,7 +10,8 @@ import LogScreen from '../atoms/LogScreen';
 import ChatBox from './ChatBox';
 import ChatScreen from '../atoms/ChatScreen';
 
-const DashBoard = ({ data, rooms, action, location }) => {
+const DashBoard = ({ data, rooms, action, location, chat, speak, subscriber }) => {
+  subscriber(data.uuid);
   return (
     <MainContainer>
       <Container>
@@ -20,7 +21,7 @@ const DashBoard = ({ data, rooms, action, location }) => {
         </ControllArea>
 
         {/* <LogScreen logs={data} /> */}
-        <ChatScreen />
+        <ChatScreen chats={chat} sendMessage={speak}/>
         {/* <ChatBox /> */}
       </Container>
     </MainContainer>
