@@ -1,6 +1,6 @@
 import React from 'react';
 import {ActionStyle} from '../styles/DashBoardStyles';
-import ChatScreen from '../atoms/ChatScreen';
+// import ChatScreen from '../atoms/ChatScreen';
 import Navigation from '../atoms/Navigation';
 import Player from '../atoms/Players';
 import LogScreen from '../atoms/LogScreen';
