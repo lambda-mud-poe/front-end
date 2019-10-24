@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { white, slatePurple, forestGreen, red,  dark } from "../variables";
+import styled from 'styled-components';
+import { white, slatePurple, forestGreen, red, dark } from '../variables';
 
 export const MainContainer = styled.div`
   background: ${dark};
@@ -68,7 +68,7 @@ export const StyledForm = styled.div`
 
 export const LogScreenStyles = styled.div`
   width: 500px;
-  min-height: 600px;
+  min-height: 900px;
   padding: 2rem 0;
   display: flex;
   height: 100%;
@@ -78,17 +78,16 @@ export const LogScreenStyles = styled.div`
 `;
 
 export const Button = styled.div`
-font-size: 1rem;
-         padding: 0.3em 1em;
-         color: white;
-         border: 1px solid transparent;
-         border-radius: 5px;
-         outline: none;
-         background: ${forestGreen};
-         white-space: nowrap;
+  font-size: 1rem;
+  padding: 0.3em 1em;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  background: ${forestGreen};
+  white-space: nowrap;
 
-
-         &:hover {
-           color: white;
-         }
+  &:hover {
+    color: white;
+  }
 `;
