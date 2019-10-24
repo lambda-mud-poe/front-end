@@ -52,6 +52,31 @@ export const NavigationStyle = styled.div`
   width: 50%;
   margin: 2px;
   border: 3px solid ${forestGreen};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .mid-section {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .btn-up {
+    width: 20%;
+  }
+
+  .btn-down {
+    width: 20%;
+  }
+
+  .btn-left {
+    width: 20%;
+  }
+
+  .btn-right {
+    width: 20%;
+  }
 `;
 
 export const StyledForm = styled.div`
