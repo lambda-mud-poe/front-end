@@ -5,10 +5,13 @@ import Players from './Players';
 const LogScreen = ({ logs }) => {
   console.log(logs);
   return (
-    <div>
-      <LogScreenStyles>{logs.title}</LogScreenStyles>
-      <Players />
-    </div>
+    <LogScreenStyles>
+      <div className="room-log">{logs.title}</div>
+
+      <div className="player-log">
+        <Players players={logs.players} />
+      </div>
+    </LogScreenStyles>
   );
 };
 

@@ -74,6 +74,9 @@ export const LogScreenStyles = styled.div`
   height: 100%;
   margin: 2px;
   border: 3px solid ${forestGreen};
+  flex-wrap: wrap;
+
+  
 `;
 
 export const Button = styled.div`
