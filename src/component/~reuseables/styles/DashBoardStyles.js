@@ -95,13 +95,12 @@ export const StyledForm = styled.div`
 
 export const LogScreenStyles = styled.div`
   width: 500px;
-  min-height: 900px;
+  height: 500px;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
   text-align: center;
   border: 3px solid ${forestGreen};
-  flex-wrap: wrap;
   overflow-y: scroll;
 
   h1 {

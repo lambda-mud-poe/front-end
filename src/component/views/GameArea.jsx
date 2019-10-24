@@ -42,6 +42,7 @@ const GameArea = () => {
       .post(`/api/move`, { direction })
       .then(res => {
         console.log('=======I moved=======', res.data);
+        setGameData(res.data);
       })
       .catch(err => {
         return err.statusText;
@@ -53,6 +54,7 @@ const GameArea = () => {
     LoadRooms();
   }, []);
   // console.log('=======',rooms)
+  console.log(gameData, '----')
   return <DashBoard data={gameData} rooms={rooms} action={actionDirection} />;
 };
 
