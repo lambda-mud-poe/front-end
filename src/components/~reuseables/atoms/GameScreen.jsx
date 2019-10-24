@@ -3,11 +3,7 @@ import {
   FlexibleXYPlot,
   LineSeries,
   MarkSeries,
-  XYPlot,
-  XAxis,
-  YAxis,
-  HorizontalGridLines,
-  PolygonSeries
+
 } from "react-vis";
 import { ScreenStyle } from "../styles/DashBoardStyles";
 
