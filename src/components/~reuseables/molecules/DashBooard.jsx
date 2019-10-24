@@ -8,6 +8,7 @@ import GameScreen from '../atoms/GameScreen';
 import ActionArea from './ActionsArea';
 import LogScreen from '../atoms/LogScreen';
 import ChatBox from './ChatBox';
+import ChatScreen from '../atoms/ChatScreen';
 
 const DashBoard = ({ data, rooms, action, location }) => {
   return (
@@ -16,9 +17,11 @@ const DashBoard = ({ data, rooms, action, location }) => {
         <ControllArea>
           <GameScreen map={rooms} location={location} />
           <ActionArea logs={data} move={action} />
-          <ChatBox />
         </ControllArea>
-        <LogScreen logs={data} />
+
+        {/* <LogScreen logs={data} /> */}
+        <ChatScreen />
+        {/* <ChatBox /> */}
       </Container>
     </MainContainer>
   );
