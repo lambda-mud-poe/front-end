@@ -12,11 +12,12 @@ export const MainContainer = styled.div`
 `;
 
 export const Container = styled.div`
-  max-width: 957.86px;
+  /* max-width: 957.86px; */
+  width: 100%;
   min-height: 600px;
   padding: 2rem 0;
   display: flex;
-  height: 100%;
+  min-height: 100vh;
   border: 3px solid ${forestGreen};
 `;
 export const ControllArea = styled.div`
@@ -29,7 +30,7 @@ export const ControllArea = styled.div`
 
 export const ScreenStyle = styled.div`
   height: 100%;
-  width: 700px;
+  width: 1000px;
   border: 3px solid ${forestGreen};
 `;
 
@@ -66,7 +67,7 @@ export const StyledForm = styled.div`
 `;
 
 export const LogScreenStyles = styled.div`
-  width: 300px;
+  width: 500px;
   min-height: 600px;
   padding: 2rem 0;
   display: flex;
