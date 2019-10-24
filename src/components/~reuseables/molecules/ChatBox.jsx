@@ -25,6 +25,7 @@ const StyledInput = styled.input`
 const ChatBox = ({ name, value, onChange }) => {
   return (
     <StyledForm>
+        <button>Logout</button>
       <StyledInput name="message" placeholder="Enter chat here" />
     </StyledForm>
   );
