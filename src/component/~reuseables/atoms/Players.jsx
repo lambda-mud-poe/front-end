@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { forestGreen } from '../variables/colors';
+import { forestGreen, red } from '../variables/colors';
+import { valera_round} from '../variables/font-famiy';
 
 const StyledPlayers = styled.div`
   height: 200px;
@@ -11,7 +12,8 @@ const StyledPlayers = styled.div`
   overflow-y: scroll;
 
   h4 {
-    color: red;
+    color: ${forestGreen};
+    font-family: ${valera_round}
   }
 `;
 

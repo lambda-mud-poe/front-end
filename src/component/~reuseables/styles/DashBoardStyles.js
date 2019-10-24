@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { white, slatePurple, forestGreen, red } from "../variables";
+import { white, slatePurple, forestGreen, red,  dark } from "../variables";
 
 export const MainContainer = styled.div`
-  background: ${slatePurple};
+  background: ${dark};
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -84,7 +84,7 @@ font-size: 1rem;
          border: 1px solid transparent;
          border-radius: 5px;
          outline: none;
-         background: ${red};
+         background: ${forestGreen};
          white-space: nowrap;
 
 
