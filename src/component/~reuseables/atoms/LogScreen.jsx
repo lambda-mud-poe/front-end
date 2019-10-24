@@ -1,15 +1,13 @@
-import React from 'react';
-import { LogScreenStyles } from '../styles/DashBoardStyles';
+import React from "react";
+import { LogScreenStyles } from "../styles/DashBoardStyles";
 let roomDetails = [];
 const LogScreen = ({ logs }) => {
-  console.log(logs);
   if (logs.title && logs.description) {
     roomDetails = roomDetails.concat({
       title: logs.title,
       description: logs.description,
       id: logs.room_id
     });
-    console.log(roomDetails);
   }
   return (
     <LogScreenStyles>

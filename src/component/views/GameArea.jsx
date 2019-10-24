@@ -35,13 +35,10 @@ const GameArea = () => {
   }
 
   const actionDirection = direction => {
-    console.log(direction)
-    // console.log('=======I moved=======', e.currentTarget);
     config
       .axiosWithAuth()
       .post(`/api/move`, { direction })
       .then(res => {
-        console.log('=======I moved=======', res.data);
         setGameData(res.data);
       })
       .catch(err => {
