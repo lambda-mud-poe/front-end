@@ -88,7 +88,7 @@ const GameScreen = ({ map, location }) => {
               highlight="#1b00ff"
               strokeWidth={5}
               opacity="1"
-              color="#008000"
+              color="pink"
               data={[newpoint]}
               style={{ cursor: "pointer" }}
             />
