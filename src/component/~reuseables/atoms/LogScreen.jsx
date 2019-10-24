@@ -3,6 +3,14 @@ import { LogScreenStyles } from '../styles/DashBoardStyles';
 let roomDetails = [];
 const LogScreen = ({ logs }) => {
   console.log(logs);
+  if (logs.error_msg) {
+    roomDetails = roomDetails.concat({
+      title: logs.error_msg,
+      description: '',
+      id: logs.room_id
+    });
+
+  }
   if (logs.title && logs.description) {
     roomDetails = roomDetails.concat({
       title: logs.title,
