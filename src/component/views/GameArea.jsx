@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import DashBoard from "../~reuseables/molecules/DashBooard";
-import config from "../../axios";
+import React, { useState, useEffect } from 'react';
+import DashBoard from '../~reuseables/molecules/DashBooard';
+import config from '../../axios';
 
 const GameArea = () => {
   const [gameData, setGameData] = useState([]);
@@ -34,14 +34,14 @@ const GameArea = () => {
       });
   }
 
-  const actionDirection = (e) => {
-    console.log('=======I moved=======', e);
-    console.log('=======I moved=======', e.currentTarget);
+  const actionDirection = direction => {
+    console.log(direction)
+    // console.log('=======I moved=======', e.currentTarget);
     config
       .axiosWithAuth()
-      .post(`/api/move`, { direction: e.currentTarget.name })
+      .post(`/api/move`, { direction })
       .then(res => {
-        console.log('=======I moved=======', res);
+        console.log('=======I moved=======', res.data);
       })
       .catch(err => {
         return err.statusText;
