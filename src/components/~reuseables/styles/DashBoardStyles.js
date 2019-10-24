@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { white, slatePurple, forestGreen, red, dark } from '../variables';
+import { white, forestGreen, dark } from '../variables';
 import { valera_round } from '../variables/font-famiy';
 
 export const MainContainer = styled.div`
@@ -13,7 +13,7 @@ export const MainContainer = styled.div`
 `;
 
 export const Container = styled.div`
-  /* max-width: 957.86px; */
+
   width: 100%;
   min-height: 600px;
   padding: 2rem 0;

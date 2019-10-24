@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { forestGreen, red } from '../variables/colors';
+import { forestGreen } from '../variables/colors';
 import { valera_round } from '../variables/font-famiy';
 
 const StyledPlayers = styled.div`
