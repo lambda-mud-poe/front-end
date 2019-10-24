@@ -1,35 +1,20 @@
 import React from 'react';
 import { LogScreenStyles } from '../styles/DashBoardStyles';
-let roomDetails = [];
-const LogScreen = ({ logs }) => {
-  console.log(logs);
-  if (logs.error_msg) {
-    roomDetails = roomDetails.concat({
-      title: logs.error_msg,
-      description: '',
-      id: logs.room_id
-    });
 
-  }
-  if (logs.title && logs.description) {
-    roomDetails = roomDetails.concat({
-      title: logs.title,
-      description: logs.description,
-      id: logs.room_id
-    });
-    console.log(roomDetails);
+const LogScreen = ({ logs }) => {
+  if (logs.error_msg) {
+    return (
+      <LogScreenStyles>
+        <h1>Room</h1>
+        <p>{logs.error_msg}</p>
+      </LogScreenStyles>
+    );
   }
   return (
     <LogScreenStyles>
       <h1>Room</h1>
-      <hr />
-      {roomDetails.map(room => (
-        <div key={room.id} className="single-room">
-          <p>Room title: {room.title}</p>
-          <p>Room description: {room.description}</p>
-          <hr />
-        </div>
-      ))}
+      <p>Room title: {logs.title}</p>
+      <p>Room description: {logs.description}</p>
     </LogScreenStyles>
   );
 };

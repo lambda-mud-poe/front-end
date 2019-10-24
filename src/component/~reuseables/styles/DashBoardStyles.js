@@ -95,7 +95,7 @@ export const StyledForm = styled.div`
 
 export const LogScreenStyles = styled.div`
   width: 500px;
-  height: 500px;
+  height: 300px;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -117,13 +117,7 @@ export const LogScreenStyles = styled.div`
     font-family: ${valera_round};
   }
 
-  .single-room {
-    margin: 1rem 0;
-  }
-  hr {
-    border: 1px solid ${white};
-    width: 100%;
-  }
+ 
 `;
 
 export const Button = styled.div`
