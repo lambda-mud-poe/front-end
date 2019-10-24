@@ -22,12 +22,26 @@ const GameArea = () => {
       });
   };
 
-  async function LoadRooms () {
+  async function LoadRooms() {
     await config
       .axiosWithAuth()
       .get(`/api/rooms/`)
       .then(res => {
         setRooms(res.data);
+      })
+      .catch(err => {
+        return err.statusText;
+      });
+  }
+
+  const actionDirection = (e) => {
+    console.log('=======I moved=======', e);
+    console.log('=======I moved=======', e.currentTarget);
+    config
+      .axiosWithAuth()
+      .post(`/api/move`, { direction: e.currentTarget.name })
+      .then(res => {
+        console.log('=======I moved=======', res);
       })
       .catch(err => {
         return err.statusText;
@@ -38,9 +52,8 @@ const GameArea = () => {
     LoadGame();
     LoadRooms();
   }, []);
-// console.log('=======',rooms)
-  return <DashBoard data={gameData}
-  rooms={rooms} />;
+  // console.log('=======',rooms)
+  return <DashBoard data={gameData} rooms={rooms} action={actionDirection} />;
 };
 
 export default GameArea;

@@ -3,11 +3,11 @@ import {ActionStyle} from '../styles/DashBoardStyles';
 import ChatScreen from '../atoms/ChatScreen';
 import Navigation from '../atoms/Navigation';
 
-const ActionArea =(props)=>{
+const ActionArea =({move})=>{
     return (
         <ActionStyle>
             <ChatScreen/>
-            <Navigation/>
+            <Navigation direction={move}/>
         </ActionStyle>
     )
 }
