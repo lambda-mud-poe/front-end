@@ -38,7 +38,6 @@ const GameArea = () => {
     LoadGame();
     LoadRooms();
   }, []);
-// console.log('=======',rooms)
   return <DashBoard data={gameData}
   rooms={rooms} />;
 };

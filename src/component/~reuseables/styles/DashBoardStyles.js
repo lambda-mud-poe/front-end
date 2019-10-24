@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { white, slatePurple, forestGreen, red } from "../variables";
+import styled from 'styled-components';
+import { white, slatePurple, forestGreen, red, dark } from '../variables';
 
 export const MainContainer = styled.div`
-  background: ${slatePurple};
+  background: ${dark};
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,11 +12,12 @@ export const MainContainer = styled.div`
 `;
 
 export const Container = styled.div`
-  max-width: 957.86px;
+  /* max-width: 957.86px; */
+  width: 100%;
   min-height: 600px;
   padding: 2rem 0;
   display: flex;
-  height: 100%;
+  min-height: 100vh;
   border: 3px solid ${forestGreen};
 `;
 export const ControllArea = styled.div`
@@ -29,19 +30,19 @@ export const ControllArea = styled.div`
 
 export const ScreenStyle = styled.div`
   height: 100%;
-  width: 700px;
+  width: 1000px;
   border: 3px solid ${forestGreen};
 `;
 
 export const ActionStyle = styled.div`
   display: flex;
   margin: 2px;
-  width: 700px;
+  width: 100%;
 `;
 
 export const ChatScreenStyle = styled.div`
   height: 200px;
-  width: 50%;
+  width: 70%;
   margin: 2px;
   border: 3px solid ${forestGreen};
 `;
@@ -51,6 +52,32 @@ export const NavigationStyle = styled.div`
   width: 50%;
   margin: 2px;
   border: 3px solid ${forestGreen};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+
+  .mid-section {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .btn-up {
+    width: 20%;
+  }
+
+  .btn-down {
+    width: 20%;
+  }
+
+  .btn-left {
+    width: 20%;
+  }
+
+  .btn-right {
+    width: 20%;
+  }
 `;
 
 export const StyledForm = styled.div`
@@ -66,27 +93,27 @@ export const StyledForm = styled.div`
 `;
 
 export const LogScreenStyles = styled.div`
-  width: 300px;
-  min-height: 600px;
+  width: 500px;
+  min-height: 900px;
   padding: 2rem 0;
   display: flex;
   height: 100%;
   margin: 2px;
   border: 3px solid ${forestGreen};
+  flex-wrap: wrap;
 `;
 
 export const Button = styled.div`
-font-size: 1rem;
-         padding: 0.3em 1em;
-         color: white;
-         border: 1px solid transparent;
-         border-radius: 5px;
-         outline: none;
-         background: ${red};
-         white-space: nowrap;
+  font-size: 1rem;
+  padding: 0.3em 1em;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  outline: none;
+  background: ${forestGreen};
+  white-space: nowrap;
 
-
-         &:hover {
-           color: white;
-         }
+  &:hover {
+    color: white;
+  }
 `;
