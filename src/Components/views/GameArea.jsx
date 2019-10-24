@@ -4,6 +4,7 @@ import config from "../../axios";
 
 const GameArea = () => {
   const [gameData, setGameData] = useState([]);
+  const [rooms, setRooms] = useState([]);
 
   /**
    * Initializes game and users,
@@ -21,9 +22,25 @@ const GameArea = () => {
       });
   };
 
-  useEffect(LoadGame, []);
+  async function LoadRooms () {
+    await config
+      .axiosWithAuth()
+      .get(`/api/rooms/`)
+      .then(res => {
+        setRooms(res.data);
+      })
+      .catch(err => {
+        return err.statusText;
+      });
+  };
 
-  return <DashBoard data={gameData} />;
+  useEffect(() => {
+    LoadGame();
+    LoadRooms();
+  }, []);
+// console.log('=======',rooms)
+  return <DashBoard data={gameData}
+  rooms={rooms} />;
 };
 
 export default GameArea;

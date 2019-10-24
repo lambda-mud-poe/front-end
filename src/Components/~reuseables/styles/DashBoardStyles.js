@@ -28,7 +28,7 @@ export const ControllArea = styled.div`
 `;
 
 export const ScreenStyle = styled.div`
-  height: 400px;
+  height: 100%;
   width: 700px;
   border: 3px solid ${forestGreen};
 `;
