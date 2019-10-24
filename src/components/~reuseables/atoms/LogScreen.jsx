@@ -18,7 +18,7 @@ const LogScreen = ({ logs }) => {
         <p>Room title: {logs.title}</p>
         <p>Room description: {logs.description}</p>
       </LogScreenStyles>
-      <ChatBox />
+     
     </div>
   );
 };

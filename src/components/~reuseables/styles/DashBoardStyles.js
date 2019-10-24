@@ -41,7 +41,7 @@ export const ActionStyle = styled.div`
 `;
 
 export const ChatScreenStyle = styled.div`
-  height: 200px;
+  height: 500px;
   width: 70%;
   margin: 2px;
   border: 3px solid ${forestGreen};
@@ -51,6 +51,13 @@ export const ChatScreenStyle = styled.div`
   h4 {
     color: ${forestGreen};
     font-weight: bold;
+  }
+
+  .chatbox {
+    border: 3px solid ${forestGreen};
+    padding: 1rem;
+    margin: 1rem;
+    min-height: 350px; 
   }
 `;
 
@@ -101,7 +108,7 @@ export const StyledForm = styled.div`
 
 export const LogScreenStyles = styled.div`
   width: 100%;
-  height: 300px;
+  height: 200px;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
