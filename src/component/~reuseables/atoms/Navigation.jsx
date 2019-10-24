@@ -1,13 +1,16 @@
-import React from "react";
-import { Button, NavigationStyle } from "../styles/DashBoardStyles";
+import React from 'react';
+import { Button, NavigationStyle } from '../styles/DashBoardStyles';
 
 const Navigation = ({direction}) => {
   return (
     <NavigationStyle>
-      <Button onClick={(e) => console.log(e)} name='w' defaultValue="wjmnhg y" className="btn">←</Button>
-      <Button onClick={direction} name='e' className="btn">→</Button>
-      <Button onClick={direction} name='s' className="btn">↓</Button>
-      <Button onClick={direction} name='n' className="btn">↑</Button>
+      <Button className="btn btn-up" onClick={direction} name='n'>↑</Button>
+      <div className="mid-section">
+        <Button className="btn btn-left" onClick={direction} name='w'>←</Button>
+        <Button className="btn btn-right" onClick={direction} name='e'>→</Button>
+      </div>
+
+      <Button className="btn btn-down" onClick={direction} name='s'>↓</Button>
     </NavigationStyle>
   );
 };

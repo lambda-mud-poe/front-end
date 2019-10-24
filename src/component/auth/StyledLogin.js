@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { white, dark, slateGrey } from '../~reuseables/variables/colors';
+import { press_start, valera_round } from '../~reuseables/variables/font-famiy';
 
 const FormContainer = styled.div`
   display: flex;
@@ -10,7 +11,7 @@ const FormContainer = styled.div`
   align-items: center;
   background-color: ${dark};
   h1 {
-    font-family: 'Press Start 2P', cursive;
+    font-family: ${press_start};
     width: 100%;
     text-align: center;
     font-size: 5rem;
@@ -27,7 +28,7 @@ const Form = styled.form`
   justify-content: center;
 
   h4 {
-    font-family: 'Press Start 2P', cursive;
+  font-family: ${press_start};
     color: ${white};
   }
 
@@ -37,7 +38,7 @@ const Form = styled.form`
     margin: 1rem;
     outline: none;
     border: none;
-    font-family: 'Varela Round', sans-serif;
+    font-family: ${valera_round};
   }
 
   button {
@@ -55,7 +56,7 @@ const Form = styled.form`
   p {
     color: ${white};
     margin: 1rem 0;
-    font-family: 'Varela Round', sans-serif;
+    font-family: ${valera_round};
     font-size: 1rem;
   }
 `;

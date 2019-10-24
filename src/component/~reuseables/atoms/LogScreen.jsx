@@ -1,7 +1,8 @@
-import React from "react";
-import { LogScreenStyles } from "../styles/DashBoardStyles";
+import React from 'react';
+import { LogScreenStyles } from '../styles/DashBoardStyles';
 
-const LogScreen = ({logs}) => {
+const LogScreen = ({ logs }) => {
+  console.log(logs);
   return <LogScreenStyles>{logs.title}</LogScreenStyles>;
 };
 
