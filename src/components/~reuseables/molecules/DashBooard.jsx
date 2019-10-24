@@ -16,7 +16,7 @@ const DashBoard = ({ data, rooms, action, location }) => {
         <ControllArea>
           <GameScreen map={rooms} location={location} />
           <ActionArea logs={data} move={action} />
-          <ChatBox />
+          {/* <ChatBox /> */}
         </ControllArea>
         <LogScreen logs={data} />
       </Container>

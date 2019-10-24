@@ -4,7 +4,7 @@ import { valera_round } from '../variables/font-famiy';
 
 export const MainContainer = styled.div`
   background: ${dark};
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,10 +13,9 @@ export const MainContainer = styled.div`
 `;
 
 export const Container = styled.div`
-
   width: 100%;
   min-height: 600px;
-  padding: 2rem 0;
+  padding: 1rem 0;
   display: flex;
   min-height: 100vh;
   border: 3px solid ${forestGreen};
@@ -46,6 +45,13 @@ export const ChatScreenStyle = styled.div`
   width: 70%;
   margin: 2px;
   border: 3px solid ${forestGreen};
+  text-align: center;
+  padding: 1rem 0;
+
+  h4 {
+    color: ${forestGreen};
+    font-weight: bold;
+  }
 `;
 
 export const NavigationStyle = styled.div`
@@ -116,8 +122,6 @@ export const LogScreenStyles = styled.div`
     padding: 0;
     font-family: ${valera_round};
   }
-
- 
 `;
 
 export const Button = styled.div`
