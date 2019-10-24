@@ -5,7 +5,7 @@ import Register from "./components/auth/Register";
 import PrivateRoute from "./components/~reuseables/molecules/PrivateRoute";
 import GameArea from "./components/views/GameArea";
 
-function App(props) {
+function App() {
   return (
       <div className="App">
         <Router>
