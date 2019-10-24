@@ -58,6 +58,7 @@ export const ChatScreenStyle = styled.div`
     padding: 1rem;
     margin: 1rem;
     min-height: 350px;
+    overflow-y: scroll;
   }
 `;
 
@@ -99,15 +100,8 @@ export const StyledForm = styled.div`
   flex-direction: column;
   width: 100%;
 
-  /* input:focus,
-  textarea:focus {
-    outline: none !important;
-    border: 5px solid ${forestGreen};
-    box-shadow: 0 0 10px #719ece;
-  } */
-
-button {
-  background-color: ${slateGrey};
+  button {
+    background-color: ${slateGrey};
     color: ${white};
     font-size: 1.2rem;
     outline: none;
@@ -118,8 +112,7 @@ button {
     display: flex;
     text-align: center;
     margin: 0 auto;
-}
-
+  }
 `;
 
 export const LogScreenStyles = styled.div`

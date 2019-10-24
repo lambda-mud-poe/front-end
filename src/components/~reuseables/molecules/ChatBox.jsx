@@ -19,7 +19,7 @@ const StyledInput = styled.input`
 const ChatBox = ({ name, value, onChange }) => {
   return (
     <StyledForm>
-      <button>Logout</button>
+      <button onClick={() => {localStorage.removeItem('key'); window.location.reload()}}>Logout</button>
       <StyledInput name="message" placeholder="Enter chat here" />
     </StyledForm>
   );
