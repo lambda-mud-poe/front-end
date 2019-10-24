@@ -9,12 +9,12 @@ import ActionArea from './ActionsArea';
 import LogScreen from '../atoms/LogScreen';
 import ChatBox from './ChatBox';
 
-const DashBoard = ({ data, rooms, action }) => {
+const DashBoard = ({ data, rooms, action, location }) => {
   return (
     <MainContainer>
       <Container>
         <ControllArea>
-          <GameScreen map={rooms} />
+          <GameScreen map={rooms} location={location} />
           <ActionArea logs={data} move={action} />
           <ChatBox />
         </ControllArea>

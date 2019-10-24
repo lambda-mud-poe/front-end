@@ -5,6 +5,7 @@ import config from '../../axios';
 const GameArea = () => {
   const [gameData, setGameData] = useState([]);
   const [rooms, setRooms] = useState([]);
+  const [currentRoom, setCurrentRoom]= useState({})
 
   /**
    * Initializes game and users,
@@ -39,6 +40,8 @@ const GameArea = () => {
       .axiosWithAuth()
       .post(`/api/move`, { direction })
       .then(res => {
+        // console.log(res.data)
+        setCurrentRoom(res.data)
         setGameData(res.data);
       })
       .catch(err => {
@@ -50,9 +53,7 @@ const GameArea = () => {
     LoadGame();
     LoadRooms();
   }, []);
-  // console.log('=======',rooms)
-  console.log(gameData, '----')
-  return <DashBoard data={gameData} rooms={rooms} action={actionDirection} />;
+  return <DashBoard data={gameData} location={currentRoom} rooms={rooms} action={actionDirection} />;
 };
 
 export default GameArea;

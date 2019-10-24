@@ -7,11 +7,11 @@ import {
   XAxis,
   YAxis,
   HorizontalGridLines,
-  PolygonSeries,
+  PolygonSeries
 } from "react-vis";
 import { ScreenStyle } from "../styles/DashBoardStyles";
 
-const GameScreen = ({ map }) => {
+const GameScreen = ({ map, location }) => {
   const formatedCoordinates = {};
   map.forEach(item => {
     formatedCoordinates[item.id] = [
@@ -35,6 +35,21 @@ const GameScreen = ({ map }) => {
     }
   });
 
+  // set current location ( x: 11, y: 2, room_id: 52,)
+  const currentLocation = {};
+  if (Object.keys(location).length !== 0) {
+    [location].forEach(item => {
+      currentLocation[0] = [
+        {
+          x: item.x,
+          y: item.y
+        }
+      ];
+    });
+  }
+  let newpoint =
+    currentLocation[0] !== undefined ? currentLocation[0][0] : "go away";
+
   const roomCoordinate = [];
   const connectedRoom = [];
 
@@ -54,7 +69,7 @@ const GameScreen = ({ map }) => {
       }
     }
   }
-
+  console.log(roomCoordinate);
 
   return (
     <ScreenStyle>
@@ -67,15 +82,27 @@ const GameScreen = ({ map }) => {
             key={Math.random() * 100}
           />
         ))}
-        <MarkSeries
-          // current={this.props.currentRoom}
-          highlight="#1b00ff"
-          strokeWidth={5}
-          opacity="1"
-          color="#008000"
-          data={roomCoordinate}
-          style={{ cursor: "pointer" }}
-        />
+        {roomCoordinate.map(room =>
+          newpoint.x === room.x && newpoint.y === room.y ? (
+            <MarkSeries
+              highlight="#1b00ff"
+              strokeWidth={5}
+              opacity="1"
+              color="#008000"
+              data={[newpoint]}
+              style={{ cursor: "pointer" }}
+            />
+          ) : (
+            <MarkSeries
+              highlight="#1b00ff"
+              strokeWidth={5}
+              opacity="1"
+              color="#008000"
+              data={[{ x: 0, y: 0 }]}
+              style={{ cursor: "pointer" }}
+            />
+          )
+        )}
         {/* <PolygonSeries
     className="polygon-series-example"
     data={roomCoordinate}/> */}
