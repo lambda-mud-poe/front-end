@@ -100,7 +100,7 @@ export const StyledForm = styled.div`
 `;
 
 export const LogScreenStyles = styled.div`
-  width: 500px;
+  width: 100%;
   height: 300px;
   padding: 2rem 0;
   display: flex;
