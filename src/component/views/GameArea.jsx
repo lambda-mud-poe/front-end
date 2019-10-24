@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import DashBoard from "../~reuseables/molecules/DashBooard";
-import config from "../../axios";
+import React, { useState, useEffect } from 'react';
+import DashBoard from '../~reuseables/molecules/DashBooard';
+import config from '../../axios';
 
 const GameArea = () => {
   const [gameData, setGameData] = useState([]);
@@ -22,12 +22,24 @@ const GameArea = () => {
       });
   };
 
-  async function LoadRooms () {
+  async function LoadRooms() {
     await config
       .axiosWithAuth()
       .get(`/api/rooms/`)
       .then(res => {
         setRooms(res.data);
+      })
+      .catch(err => {
+        return err.statusText;
+      });
+  }
+
+  const actionDirection = direction => {
+    config
+      .axiosWithAuth()
+      .post(`/api/move`, { direction })
+      .then(res => {
+        setGameData(res.data);
       })
       .catch(err => {
         return err.statusText;
@@ -38,8 +50,9 @@ const GameArea = () => {
     LoadGame();
     LoadRooms();
   }, []);
-  return <DashBoard data={gameData}
-  rooms={rooms} />;
+  // console.log('=======',rooms)
+  console.log(gameData, '----')
+  return <DashBoard data={gameData} rooms={rooms} action={actionDirection} />;
 };
 
 export default GameArea;

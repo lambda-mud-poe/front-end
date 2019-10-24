@@ -35,15 +35,11 @@ const GameScreen = ({ map }) => {
     }
   });
 
-  // Create arrays to hold point coordinates and direction
   const roomCoordinate = [];
   const connectedRoom = [];
 
   if (Object.keys(formatedCoordinates).length !== 0) {
-    // Loop through each room in the map object
     for (let room in formatedCoordinates) {
-      // Set data equal to the first element (x, y coordinates)
-      // in each room of the room_data object
       let roomLocation = formatedCoordinates[room][0];
       roomCoordinate.push(roomLocation);
       for (let adjacentRooms in formatedCoordinates[room][1]) {
@@ -59,7 +55,6 @@ const GameScreen = ({ map }) => {
     }
   }
 
-  console.log("-----linked---", connectedRoom);
 
   return (
     <ScreenStyle>

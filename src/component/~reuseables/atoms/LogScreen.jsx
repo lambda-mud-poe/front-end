@@ -2,8 +2,21 @@ import React from 'react';
 import { LogScreenStyles } from '../styles/DashBoardStyles';
 
 const LogScreen = ({ logs }) => {
-  console.log(logs);
-  return <LogScreenStyles>{logs.title}</LogScreenStyles>;
+  if (logs.error_msg) {
+    return (
+      <LogScreenStyles>
+        <h1>Room</h1>
+        <p>{logs.error_msg}</p>
+      </LogScreenStyles>
+    );
+  }
+  return (
+    <LogScreenStyles>
+      <h1>Room</h1>
+      <p>Room title: {logs.title}</p>
+      <p>Room description: {logs.description}</p>
+    </LogScreenStyles>
+  );
 };
 
 export default LogScreen;

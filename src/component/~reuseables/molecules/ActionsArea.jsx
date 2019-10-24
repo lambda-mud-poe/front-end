@@ -4,12 +4,12 @@ import ChatScreen from '../atoms/ChatScreen';
 import Navigation from '../atoms/Navigation';
 import Player from '../atoms/Players';
 
-const ActionArea =(props)=>{
+const ActionArea =({move, logs})=>{
     return (
         <ActionStyle>
             <ChatScreen/>
-            <Navigation/>
-            <Player players={props.logs.players} />
+            <Navigation direction={move}/>
+            <Player players={logs.players} />
         </ActionStyle>
     )
 }

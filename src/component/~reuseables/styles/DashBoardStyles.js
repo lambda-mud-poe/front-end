@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { white, slatePurple, forestGreen, red, dark } from '../variables';
+import { valera_round } from '../variables/font-famiy';
 
 export const MainContainer = styled.div`
   background: ${dark};
@@ -94,13 +95,29 @@ export const StyledForm = styled.div`
 
 export const LogScreenStyles = styled.div`
   width: 500px;
-  min-height: 900px;
+  height: 300px;
   padding: 2rem 0;
   display: flex;
-  height: 100%;
-  margin: 2px;
+  flex-direction: column;
+  text-align: center;
   border: 3px solid ${forestGreen};
-  flex-wrap: wrap;
+  overflow-y: scroll;
+
+  h1 {
+    font-weight: bold;
+    font-family: ${valera_round};
+    color: ${forestGreen};
+    width: 100%;
+    padding-bottom: 1rem;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    font-family: ${valera_round};
+  }
+
+ 
 `;
 
 export const Button = styled.div`
