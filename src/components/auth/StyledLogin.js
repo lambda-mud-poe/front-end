@@ -11,7 +11,7 @@ const FormContainer = styled.div`
   align-items: center;
   background-color: ${dark};
   h1 {
-    font-family: ${press_start};
+    font-family: 'Press Start 2P';
     width: 100%;
     text-align: center;
     font-size: 5rem;
@@ -28,7 +28,7 @@ const Form = styled.form`
   justify-content: center;
 
   h4 {
-  font-family: ${press_start};
+    font-family: 'Press Start 2P';
     color: ${white};
   }
 
