@@ -1,11 +1,20 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const StyledPlayers = styled.div`
+    h4 {
+        color: red;
+        
+    }
+`;
+
 
 export default function Players({ players }) {
 
 
   return (
-    <div>
-      <h4>Players in the same room</h4>
+    <StyledPlayers>
+      <h4>Other Players</h4>
       {players.map((player, i) => {
         console.log(player);
         return (
@@ -14,7 +23,7 @@ export default function Players({ players }) {
           </div>
         );
       })}
-    </div>
+    </StyledPlayers>
   );
 }
 

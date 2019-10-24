@@ -76,7 +76,15 @@ export const LogScreenStyles = styled.div`
   border: 3px solid ${forestGreen};
   flex-wrap: wrap;
 
-  
+  .room-log {
+    width: 50%;
+    border-right: 1px solid white;
+  }
+
+  .player-log {
+    width: 50%;
+    padding: 1rem;
+  }
 `;
 
 export const Button = styled.div`
