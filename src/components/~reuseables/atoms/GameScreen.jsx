@@ -94,7 +94,7 @@ const GameScreen = ({ map, location }) => {
               highlight="#1b00ff"
               strokeWidth={5}
               opacity="1"
-              color="#008000"
+              color="transparent"
               data={[{}]}
               style={{ cursor: "pointer" }}
               key={id}
