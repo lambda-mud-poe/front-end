@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { white, dark, slateGrey } from '../~reuseables/variables/colors';
-import { press_start, valera_round } from '../~reuseables/variables/font-famiy';
+import { valera_round } from '../~reuseables/variables/font-famiy';
 
 const FormContainer = styled.div`
   display: flex;
