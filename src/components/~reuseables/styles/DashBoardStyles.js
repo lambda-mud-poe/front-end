@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { white, forestGreen, dark } from '../variables';
+import { white, forestGreen, dark, slateGrey } from '../variables';
 import { valera_round } from '../variables/font-famiy';
 
 export const MainContainer = styled.div`
   background: ${dark};
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,10 +13,9 @@ export const MainContainer = styled.div`
 `;
 
 export const Container = styled.div`
-
   width: 100%;
   min-height: 600px;
-  padding: 2rem 0;
+  padding: 1rem 0;
   display: flex;
   min-height: 100vh;
   border: 3px solid ${forestGreen};
@@ -42,10 +41,25 @@ export const ActionStyle = styled.div`
 `;
 
 export const ChatScreenStyle = styled.div`
-  height: 200px;
+  height: 500px;
   width: 70%;
   margin: 2px;
   border: 3px solid ${forestGreen};
+  text-align: center;
+  padding: 1rem 0;
+
+  h4 {
+    color: ${forestGreen};
+    font-weight: bold;
+  }
+
+  .chatbox {
+    border: 3px solid ${forestGreen};
+    padding: 1rem;
+    margin: 1rem;
+    min-height: 350px;
+    overflow-y: scroll;
+  }
 `;
 
 export const NavigationStyle = styled.div`
@@ -82,20 +96,28 @@ export const NavigationStyle = styled.div`
 `;
 
 export const StyledForm = styled.div`
-  display: block;
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  margin-top: 2rem;
-  input:focus,
-  textarea:focus {
-    outline: none !important;
-    border: 5px solid ${forestGreen};
-    box-shadow: 0 0 10px #719ece;
+
+  button {
+    background-color: ${slateGrey};
+    color: ${white};
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    margin-bottom: 1rem 0;
+    width: 50%;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
   }
 `;
 
 export const LogScreenStyles = styled.div`
-  width: 500px;
-  height: 300px;
+  width: 100%;
+  height: 200px;
   padding: 2rem 0;
   display: flex;
   flex-direction: column;
@@ -116,8 +138,6 @@ export const LogScreenStyles = styled.div`
     padding: 0;
     font-family: ${valera_round};
   }
-
- 
 `;
 
 export const Button = styled.div`
