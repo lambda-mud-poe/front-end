@@ -1,19 +1,20 @@
-import React, { useState, useEffect } from "react";
-import Pusher from "pusher-js";
-import DashBoard from "../~reuseables/molecules/DashBooard";
-import config from "../../axios";
+import React, { useState, useEffect } from 'react';
+import Pusher from 'pusher-js';
+import DashBoard from '../~reuseables/molecules/DashBooard';
+import config from '../../axios';
 
+const { REACT_APP_PUSHER_API_KEY } = process.env;
 const GameArea = () => {
   const [gameData, setGameData] = useState([]);
   const [rooms, setRooms] = useState([]);
   const [currentRoom, setCurrentRoom] = useState({});
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
 
   /**
    * Initialze Pusher
    */
-  const pusher = new Pusher("a251c78f5cdcaf3a85d8", {
-    cluster: "eu",
+  const pusher = new Pusher(REACT_APP_PUSHER_API_KEY, {
+    cluster: 'eu',
     forceTLS: true
   });
 
@@ -29,12 +30,12 @@ const GameArea = () => {
       });
   };
 
-  const subscriber =(uuid)=>{
+  const subscriber = uuid => {
     const channel = pusher.subscribe(`p-channel-${uuid}`);
-        channel.bind('broadcast', function(data) {
-            console.log(JSON.stringify(data));
-        });
-  }
+    channel.bind('broadcast', function(data) {
+      console.log(JSON.stringify(data));
+    });
+  };
   /**
    * Initializes game and users,
    *@param: none
