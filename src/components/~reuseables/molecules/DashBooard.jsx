@@ -6,11 +6,10 @@ import {
 } from '../styles/DashBoardStyles';
 import GameScreen from '../atoms/GameScreen';
 import ActionArea from './ActionsArea';
-import LogScreen from '../atoms/LogScreen';
-import ChatBox from './ChatBox';
 import ChatScreen from '../atoms/ChatScreen';
 
-const DashBoard = ({ data, rooms, action, location }) => {
+const DashBoard = ({ data, rooms, action, location, chat, speak, subscriber }) => {
+  subscriber(data.uuid);
   return (
     <MainContainer>
       <Container>
@@ -18,10 +17,7 @@ const DashBoard = ({ data, rooms, action, location }) => {
           <GameScreen map={rooms} location={location} />
           <ActionArea logs={data} move={action} />
         </ControllArea>
-
-        {/* <LogScreen logs={data} /> */}
-        <ChatScreen />
-        {/* <ChatBox /> */}
+        <ChatScreen chats={chat} sendMessage={speak}/>
       </Container>
     </MainContainer>
   );

@@ -65,20 +65,20 @@ const GameScreen = ({ map, location }) => {
       }
     }
   }
-  console.log(roomCoordinate);
+
 
   return (
     <ScreenStyle>
       <FlexibleXYPlot width={600} height={600}>
-        {connectedRoom.map(link => (
+        {connectedRoom.map((link, id) => (
           <LineSeries
             strokeWidth="2"
             color="#FF0"
             data={link}
-            key={Math.random() * 100}
+            key={id}
           />
         ))}
-        {roomCoordinate.map(room =>
+        {roomCoordinate.map((room, id) =>
           newpoint.x === room.x && newpoint.y === room.y ? (
             <MarkSeries
               highlight="#1b00ff"
@@ -87,15 +87,17 @@ const GameScreen = ({ map, location }) => {
               color="pink"
               data={[newpoint]}
               style={{ cursor: "pointer" }}
+              key={id}
             />
           ) : (
             <MarkSeries
               highlight="#1b00ff"
               strokeWidth={5}
               opacity="1"
-              color="#008000"
-              data={[{ x: 0, y: 0 }]}
+              color="transparent"
+              data={[{}]}
               style={{ cursor: "pointer" }}
+              key={id}
             />
           )
         )}

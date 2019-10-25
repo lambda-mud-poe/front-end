@@ -1,6 +1,6 @@
 import React from 'react';
 import { LogScreenStyles } from '../styles/DashBoardStyles';
-import ChatBox from '../molecules/ChatBox';
+// import ChatBox from '../molecules/ChatBox';
 
 const LogScreen = ({ logs }) => {
   if (logs.error_msg) {

@@ -22,7 +22,7 @@ export const Container = styled.div`
 `;
 export const ControllArea = styled.div`
   position: relative;
-  height: auto;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   padding: 0 1rem;
